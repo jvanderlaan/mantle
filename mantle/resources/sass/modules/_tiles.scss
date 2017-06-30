@@ -1,0 +1,46 @@
+/*/////////////////////////////////////////
+// -------------- Tiles ---------------- //
+/////////////////////////////////////////*/
+
+.tile {
+	align-items: stretch;
+	display: block;
+	flex-basis: auto;
+	flex-grow: 1;
+	flex-shrink: 1;
+	min-height: min-content;
+	&.tile-collection {
+		margin-left: -10px;
+		margin-right: -10px;
+		margin-top: -10px;
+		&:last-child {
+			margin-bottom: -10px;
+		}
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+	&.tile-child {
+		margin: 0 !important;
+	}
+	&.tile-parent {
+		padding: 10px;
+	}
+	&.tile-vertical {
+		flex-direction: column;
+		& > .tile.tile-child:not(:last-child) {
+			margin-bottom: 20px !important;
+		}
+	}
+	@include large {
+		&:not(.tile-child) {
+		display: flex;
+		}
+		@for $i from 1 through 12 {
+			&.width-#{$i} {
+				flex: none;
+				width: ($i / 12) * 100%;
+			}
+		}
+	}
+}

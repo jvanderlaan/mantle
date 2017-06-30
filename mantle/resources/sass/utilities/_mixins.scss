@@ -1,0 +1,118 @@
+///////////////////////////////////////////
+// --------------- Mixins -------------- //
+///////////////////////////////////////////
+
+//Buttons
+@mixin buttons($color, $background-color, $border-color, $background-hover-color) {
+	color: $color;
+	background-color: $background-color;
+	border-color: $border-color;
+	&:hover {
+		color: $color;
+		background-color: $background-hover-color;
+	}
+}
+
+//Dropdowns
+@mixin dropdown($background-color, $color, $size, $hover-color, $hover-background-color) {
+	background-color: $background-color;
+	a {
+		color: $color;
+		font-size: $size;
+		&:hover {
+			color: $hover-color;
+			background-color: $hover-background-color;
+		}
+	}
+}
+
+//Cards
+@mixin card($color, $background-color, $border-color) {
+	color: $color;
+	background-color: $background-color;
+	.card-header {
+		border-bottom-color: $border-color;
+	}
+	.card-footer {
+		border-top-color: $border-color;
+	}
+}
+
+//Illuminated Nav Links
+@mixin illume($color, $background-color-hover, $color-border) {
+	&:hover {
+		color: $color;
+		background: linear-gradient(to top, $background-color-hover, rgba(255, 255, 255, 0.0));
+		border-bottom: 4px solid $color-border;
+		margin-bottom: -4px;
+	}
+}
+
+@mixin illume-side($color, $background-color-hover, $color-border) {
+	&:hover {
+		color: $color;
+		background: linear-gradient(to right, $background-color-hover, rgba(255, 255, 255, 0.0));
+		border-left: 4px solid $color-border;
+		margin-left: -4px;
+	}
+}
+
+//Icons
+@mixin fa($size, $dimensions) {
+	display: inline-block;
+	font-size: $size;
+	height: $dimensions;
+	line-height: $dimensions;
+	text-align: center;
+	vertical-align: top;
+	width: $dimensions;
+}
+
+//Typography
+@mixin input-font($family, $size) {
+	font-family: $family;
+	font-size: $size;
+}
+
+@mixin span($color, $weight) {
+	color: $color;
+	font-weight: $weight;
+}
+
+
+//Responsiveness
+@mixin small {
+	@media screen and (max-width: $medium - 1px) {
+		@content
+	}
+}
+
+@mixin medium {
+	@media screen and (min-width: $medium) {
+		@content
+	}
+}
+
+@mixin medium-only {
+	@media screen and (min-width: $medium) and (max-width: $large - 1px) {
+		@content
+	}
+}
+
+@mixin large {
+	@media screen and (min-width: $large) {
+		@content
+	}
+}
+
+@mixin large-only {
+	@media screen and (min-width: $large) and (max-width: $wide - 1px) {
+		@content
+	}
+}
+
+@mixin wide {
+	@media screen and (min-width: $wide) {
+		@content
+	}
+}

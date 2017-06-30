@@ -1,0 +1,181 @@
+/*/////////////////////////////////////////
+// ------------- Nav-Top --------------- //
+/////////////////////////////////////////*/
+
+// Top Nav Bar
+.nav {
+	display: flex;
+	align-items: stretch;
+	min-height: 60px;
+	max-height: 60px;
+	width: 100%;
+	z-index: 2;
+	position: fixed;
+	text-align: center;
+	background-color: $navy;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	& > .container {
+		display: flex;
+		align-items: stretch;
+		height: 100%;
+		width: 100%;
+	}
+	.nav-item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		ul {
+			display: inherit;
+			li {
+				display: inline-block;
+				margin-right: 10px;
+				margin-left: 10px;
+				padding-top: 4px;
+				padding-bottom: 4px;
+				&:first-child {
+					margin-left: 0px;
+				}
+				&:last-child {
+					margin-right: 0px;
+				}
+				@include small {
+					margin: 0;
+				}
+				a {
+					display: block;
+					padding: 15px;
+					color: $white;
+					text-decoration: none;
+					line-height: 22px;
+					&.nav-icon {
+						padding: 0;
+						color: $white;
+							&:hover {
+							color: $white-hover;
+						}
+					}
+				}
+			}
+			&.icon-list {
+				@include small {
+					display: flex;
+					justify-content: center;
+					li {
+						&:last-child {
+							border: none;
+						}
+						a {
+							padding-bottom: 15px;
+							padding-top: 15px;
+						}
+					}
+				}
+			}
+		}
+		img {
+			max-height: 42px;
+			@include small {
+				display: none;
+			}
+		}
+		@include small {
+			display: block;
+			background-color: $navy-lighter;
+			li {
+				width: 100%;
+				margin: 0;
+				text-align: center;
+				border-bottom: 1px solid $navy-light;
+			}
+			// &.toggled {
+			// 	display: block;
+			// }
+		}
+	}
+	@include small {
+		justify-content: flex-start;
+		max-height: 100%;
+		.container {
+			display: block;
+			max-width: 100%;
+		}
+	}
+	@include small {
+		transform: translateY(-100%);
+		transition-duration: 600ms;
+		&.toggled {
+			padding-top: 60px;
+			transform: translateY(0px);
+			transition-duration: 600ms;
+		}
+	}
+}
+
+// Collapsed Nav Bars
+.nav-small {
+	display: flex;
+	align-items: stretch;
+	min-height: 60px;
+	max-height: 60px;
+	width: 100%;
+	z-index: 20;
+	position: fixed;
+	background-color: $navy;
+	color: $white;
+	text-align: left;
+	line-height: 22px;
+	padding-top: 18px;
+	padding-bottom: 18px;
+	padding-left: 15px;
+	font-size: $size-5;
+	&:hover {
+		color: $white-hover;
+	}
+	.nav-toggle {
+		cursor: pointer;
+		// @include medium {
+		// 	display: none;
+		// }
+	}
+	@include medium {
+		display: none;
+	}	
+}
+
+// Positioning
+.nav-left,
+.nav-right {
+	align-items: stretch;
+	flex-basis: 0;
+	flex-grow: 1;
+	flex-shrink: 0;
+}
+
+.nav-left {
+	display: flex;
+	justify-content: flex-start;
+	@include small {
+		display: block;
+	}
+}
+
+.nav-right {
+	display: flex;
+	justify-content: flex-end;
+	@include small {
+		display: block;
+	}
+}
+
+.nav-center {
+	display: flex;
+	flex-grow: 0;
+	flex-shrink: 0;
+	align-items: stretch;
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+	@include small {
+		display: block;
+	}
+}

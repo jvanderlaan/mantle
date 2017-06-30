@@ -1,0 +1,85 @@
+/*/////////////////////////////////////////
+// -------------- Tabs ----------------- //
+/////////////////////////////////////////*/
+
+.tabs {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	border-bottom: 1px solid $gray-lighter;
+	.tab {
+		display: block;
+		&:hover {
+			background-color: $gray-lightest;
+		}
+		&.tab-active {
+			border-width: 1px;
+			border-style: solid;
+			border-top-color: $gray-lighter;
+			border-right-color: $gray-lighter;
+			border-bottom-color: $white;
+			border-left-color: $gray-lighter;
+			background-color: $white;
+			margin-bottom: -1px;
+		}
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 5px 15px;
+			text-decoration: none;
+			color: $gray;
+			&:hover,
+			&:focus,
+			&:active {
+				background-color: $transparent;
+			}
+		}
+	}
+	@include small {
+		display: none;
+	}	
+}
+
+.tab {
+	&.accordion {
+		cursor: pointer;
+		display: block;
+		width: 100%;
+		padding: 10px;
+		background-color: $gray-lightest;
+		border-radius: 0;
+		border-top: 1px solid $gray-lighter;
+		border-right: 1px solid $gray-lighter;
+		border-left: 1px solid $gray-lighter;
+		&:last-of-type {
+			border-bottom: 1px solid $gray-lighter;
+		}
+		a {
+			text-decoration: none;
+			color: $gray;
+		}
+		@include medium {
+			display: none;
+		}
+	}
+}
+
+.tab-content {
+	margin-top: 10px;
+	display: none;
+	&.tab-active {
+		display: block;
+	}
+	@include small {
+		margin-top: 0;
+		padding: 10px;
+		border-top: 1px solid $gray-lighter;
+		border-right: 1px solid $gray-lighter;
+		border-left: 1px solid $gray-lighter;
+		&:last-child {
+			border-top: none;
+			border-bottom: 1px solid $gray-lighter;
+		}
+	}
+}

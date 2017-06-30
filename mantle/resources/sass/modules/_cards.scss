@@ -1,0 +1,65 @@
+/*/////////////////////////////////////////
+// -------------- Cards ---------------- //
+/////////////////////////////////////////*/
+
+.card {
+	max-width: 100%;
+	line-height: 1.8;
+	font-size: $text;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	.card-header {
+		display: flex;
+		align-items: stretch;
+		padding: 10px 20px 10px 20px;
+		border-bottom-width: 1px;
+		border-bottom-style: solid;
+		.card-header-item {
+			align-items: center;
+			display: flex;
+			flex-grow: 1;
+			.card-header-title {
+				font-weight: $weight-strong;
+			}
+			.card-header-icon {
+				width: 100%;
+				display: flex;
+				justify-content: flex-end;
+			}
+		}
+	}
+	.card-content {
+		padding: 10px 20px 10px 20px;
+	}
+	.card-footer {
+		display: flex;
+		align-items: stretch;
+		padding: 10px 20px 10px 20px;
+		border-top-width: 1px;
+		border-top-style: solid;
+		.card-footer-item {
+			align-items: center;
+			display: flex;
+			flex-grow: 1;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			a {
+				display: inline-block;
+				margin-right: 10px;
+				margin-left: 10px;
+				&:first-child {
+					margin-left: 0px;
+				}
+				&:last-child {
+					margin-right: 0px;
+				}
+			}
+		}
+	}
+	.card-image {
+		display: block;
+		position: relative;
+		img {
+			display: block;
+		}
+	}
+}

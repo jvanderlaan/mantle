@@ -1,0 +1,107 @@
+///////////////////////////////////////////
+// ------------ Variables -------------- //
+///////////////////////////////////////////
+
+// Colors
+$black: #0A0A0A !default;
+$black-hover: rgba(10, 10, 10, 0.6) !default;
+
+$blue: #82AAFF !default;
+$blue-hover: rgba(130, 170, 255, 0.6) !default;
+
+$blue-light: #B2CCD6 !default;
+$blue-light-hover: rgba(178, 204, 214, 0.6) !default;
+
+$brown: #AB7967 !default;
+$brown-hover: rgba(171, 121, 103, 0.6) !default;
+
+$cyan: #89DDFF !default;
+$cyan-hover: rgba(137, 221, 255, 0.6) !default;
+
+$gray: #808080 !default;
+$gray-hover: rgba(128, 128, 128, 0.6) !default;
+
+$gray-light: #B5B5B5 !default;
+$gray-light-hover: rgba(181, 181, 181, 0.6) !default;
+
+$gray-lighter: #E3E3E3 !default;
+$gray-lighter-hover: rgba(227, 227, 227, 0.6) !default;
+
+$gray-lightest: #F5F5F5 !default;
+$gray-lightest-hover: rgba(245, 245, 245, 0.6) !default;
+
+$green: #C3E88D !default;
+$green-hover: rgba(195, 232, 141, 0.6) !default;
+
+$navy: #263238 !default;
+$navy-hover: rgba(38, 50, 56, 0.6) !default;
+
+$navy-light: #3b464b !default;
+$navy-light-hover: rgba(38, 50, 56, 0.6) !default;
+
+$navy-lighter: #304047 !default;
+$navy-lighter-hover: rgba(38, 50, 56, 0.6) !default;
+
+$orange: #F78C6C !default;
+$orange-hover: rgba(247, 140, 108, 0.6) !default;
+
+$pink: #F07178 !default;
+$pink-hover: rgba(240, 113, 120, 0.6) !default;
+
+$purple: #C792EA !default;
+$purple-hover: rgba(199, 146, 234, 0.6) !default;
+
+$red: #FF5370 !default;
+$red-hover: rgba(255, 83, 112, 0.6) !default;
+
+$teal: #4DB6AC !default;
+$teal-hover: rgba(77, 182, 172, 0.6) !default;
+
+$violet: #BB80B3 !default;
+$violet-hover: rgba(187, 128, 179, 0.6) !default;
+
+$white: #FFF !default;
+$white-hover: rgba(255, 255, 255, 0.6) !default;
+
+$yellow: #FFCB6B !default;
+$yellow-hover: rgba(255, 203, 107, 0.6) !default;
+
+$transparent: transparent !default;
+
+$danger: $red;
+$success: $green;
+$warning: $orange;
+
+$brand-primary: $cyan !default;
+$brand-secondary: $gray !default;
+$brand-tertiary: $navy !default;
+
+//Typogrophy
+$family-headings: "Open Sans", Helvetica, Arial, sans-serif !default;
+$family-copy: "Open Sans", Helvetica, Arial, sans-serif !default;
+$family-code: "Inconsolata", Arial, sans-serif, !default;
+$family-icons: "FontAwesome";
+
+$size-1: 48px !default;
+$size-2: 40px !default;
+$size-3: 32px !default;
+$size-4: 28px !default;
+$size-5: 24px !default;
+$size-6: 20px !default;
+$size-7: 16px !default;
+$size-8: 14px !default;
+$size-9: 11px !default;
+
+$text: 14px !default;
+
+$marketing: 64px !default;
+
+$weight-normal: 400;
+$weight-bold: 700;
+$weight-strong: 600;
+$weight-thin: 100;
+
+//Breakpoints
+$medium: 600px !default;
+$large: 990px !default;
+$wide: 1180px !default;

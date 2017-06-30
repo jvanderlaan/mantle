@@ -1,0 +1,42 @@
+/*/////////////////////////////////////////
+// ----------- Notifications ----------- //
+/////////////////////////////////////////*/
+
+.notification {
+	display: flex;
+	align-items: center;
+	font-size: $size-8;
+	padding: 10px;
+	&:not(:last-child) {
+		margin-bottom: 20px;
+	}
+	&.success {
+		background-color: $green;
+		color: $white;
+	}
+	&.neutral {
+		background-color: $gray-lighter;
+		color: $gray;
+	}
+	&.alert {
+		background-color: $red;
+		color: $white;
+	}
+}
+
+.message {
+	display: flex;
+	justify-content: flex-start;
+	align-items: stretch;
+	flex-basis: 0;
+	flex-grow: 1;
+	flex-shrink: 0;
+}
+
+.dismiss-notification {
+	text-decoration: none;
+	color: inherit;
+	i {
+		display: block;
+	}
+}

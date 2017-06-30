@@ -1,0 +1,19 @@
+/*/////////////////////////////////////////
+// --------------- Tags ---------------- //
+/////////////////////////////////////////*/
+
+.tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: $size-9;
+	background-color: $gray-lighter;
+	border-radius: 15px;
+	white-space: no-wrap;
+	margin-bottom: 5px;
+	a {
+		text-decoration: none;
+		color: $gray;
+		padding: 5px 10px;
+	}
+}

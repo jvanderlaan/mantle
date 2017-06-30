@@ -1,0 +1,41 @@
+/*/////////////////////////////////////////
+// -------------- Tables --------------- //
+/////////////////////////////////////////*/
+
+.table-container {
+	overflow-x: auto;
+}
+
+.table {
+	background-color: $white;
+	color: $gray;
+	margin-bottom: 20px;
+	width: 100%;
+	th,
+	td {
+		border: 1px solid $gray-lighter;
+		border-width: 0 0 1px;
+		padding: 12px 12px;
+		vertical-align: center;
+		text-align: left;
+	}
+	th {
+		font-weight: $weight-bold;
+	}
+	tr{
+		&:hover {
+			background-color: $gray-lightest;
+		}
+	}
+	thead {
+		th {
+			border-width: 0 0 2px;
+		}
+		tr {
+			&:hover {
+				background-color: transparent;
+			}
+		}
+	}
+
+}

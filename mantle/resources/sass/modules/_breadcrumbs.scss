@@ -1,0 +1,35 @@
+/*/////////////////////////////////////////
+// ----------- Breadcrumbs ------------- //
+/////////////////////////////////////////*/
+
+.breadcrumbs {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	width: 100%;
+	.crumb {
+		display: inline-block;
+		font-size: $size-6; 
+		color: $gray-light;
+		text-decoration: none;
+		line-height: 28px;
+		&:not(:first-child) {
+			padding-left: 10px;
+		}
+		&:not(:last-child):after {
+			content: "\f054";
+			font-family: FontAwesome;
+			font-style: normal;
+			font-weight: normal;
+			text-decoration: inherit;
+			font-size: $size-8;
+			padding-left: 10px;
+		}
+		&:last-child {
+			color: $gray;
+		}
+		@include small {
+			font-size: $size-7;
+		}
+	}
+}

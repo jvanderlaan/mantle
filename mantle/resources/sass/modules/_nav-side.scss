@@ -1,0 +1,115 @@
+/*/////////////////////////////////////////
+// ------------- Nav-Side -------------- //
+/////////////////////////////////////////*/
+
+// Side Nav Bar
+.nav-side {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	position: fixed;
+	width: 240px;
+	height: 100vh;
+	z-index: 1;
+	background-color: $navy-lighter;
+	// box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	.nav-item {
+
+		.market {
+			height: 60px;
+			background-color: $navy;
+		}
+		.menu {
+			padding-right: 4px;
+			padding-left: 4px;
+			li {
+				display: block;
+				padding-top: 4px;
+				padding-bottom: 4px;
+				a {
+					display: block;
+					padding: 15px;
+					color: $gray-lighter;
+					text-decoration: none;
+					line-height: 22px;
+					i {
+						color: $blue-light-hover;
+						// font-size: $size-6;
+						margin-right: 10px;
+					}
+				}
+			}
+		}
+	}
+	@include small {
+		transform: translateX(-100%);
+		transition-duration: 600ms;
+		&.toggled {
+			transform: translateX(0px);
+			transition-duration: 600ms;
+		}
+	}
+}
+
+// Collapsed Nav Bars
+.nav-small {
+	display: flex;
+	align-items: stretch;
+	min-height: 60px;
+	max-height: 60px;
+	width: 100%;
+	z-index: 20;
+	position: fixed;
+	background-color: $navy;
+	color: $white;
+	text-align: left;
+	line-height: 22px;
+	padding-top: 18px;
+	padding-bottom: 18px;
+	padding-left: 15px;
+	font-size: $size-5;
+	&:hover {
+		color: $white-hover;
+	}
+	.nav-toggle {
+		cursor: pointer;
+		// @include medium {
+		// 	display: none;
+		// }
+	}
+	@include medium {
+		display: none;
+	}	
+}
+
+
+// Positioning 
+.nav-top,
+.nav-bottom {
+	flex-direction: column;
+	align-items: stretch;
+	flex-basis: 0;
+	flex-grow: 1;
+	flex-shrink: 0;
+}
+
+.nav-top {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.nav-bottom {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.nav-middle {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 0;
+	flex-shrink: 0;
+	align-items: stretch;
+	justify-content: center;
+	margin-top: auto;
+	margin-bottom: auto;
+}

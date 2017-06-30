@@ -1,0 +1,133 @@
+/*/////////////////////////////////////////
+// -------------- Forms ---------------- //
+/////////////////////////////////////////*/
+
+.form-item {
+	position: relative;
+	text-align: left;
+	&:not(:last-child) {
+		margin-bottom: 15px;
+	}
+}
+
+.form-label {
+	@include input-font($family-copy, $size-8);
+	font-weight: $weight-bold;
+	display: block;
+	margin-bottom: 8px;
+}
+
+.check-label,
+.radio-label {
+	@include input-font($family-copy, $size-8);
+	align-items: center;
+	cursor: pointer;
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	position: relative;
+	vertical-align: top;
+	.form-checkbox,
+	.form-radio {
+		margin-left: 10px;
+	}
+}
+
+.form-input,
+.form-textarea {
+	@include input-font($family-copy, $size-8);
+	color: $gray;
+	border: 1px solid $gray-lighter;
+	padding: 8px;
+	width: 100%;
+	&:hover {
+		border-color: $gray;
+	}
+	&:focus,
+	&:active {
+		border: 1px solid $gray;
+		box-shadow: 0 0 5px rgba($gray, 0.4);
+	}
+}
+
+.form-textarea {
+	display: block;
+	min-height: 150px;
+	max-height: 600px;
+	resize: vertical;
+}
+
+.form-select {
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+	width: 100%;
+	&:after {
+		position: absolute;
+		display: block;
+		pointer-events: none;
+		font-family: $family-icons;
+		content: "\f0d7";
+		height: 10px;
+		width: 10px;
+		margin-top: -8px;
+		right: 15px;
+		top: 50%;
+	}
+	select {
+		appearance: none;
+		cursor: pointer;
+		display: inline-block;
+		outline: none;
+		width: 100%;
+		padding-top: 8px;
+		padding-right: 35px; 
+		padding-bottom: 8px;
+		padding-left: 8px;
+		@include input-font($family-copy, $size-8);
+		color: $gray;
+		border: 1px solid $gray-lighter;
+		&:hover {
+			border-color: $gray;
+		}
+		&:focus,
+		&:active {
+			border: 1px solid $gray;
+			box-shadow: 0 0 5px rgba($gray, 0.4);
+		}
+	}
+}
+
+.form-search {
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+	width: 100%;
+	&:before {
+		position: absolute;
+		display: block;
+		pointer-events: none;
+		font-family: $family-icons;
+		content: "\f002";
+		height: 10px;
+		width: 10px;
+		margin-top: -8px;
+		left: 15px;
+		top: 50%;
+	}
+	.form-input {
+		padding-left: 40px;
+	}
+}
+
+.validate {
+	display: block;
+	font-size: $size-9;
+	margin-top: 5px;
+	&.valid {
+		color: $green;
+	}
+	&.invalid {
+		color: $red;
+	}
+}

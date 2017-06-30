@@ -1,0 +1,129 @@
+html {
+	background-color: $white;
+	color: $gray;
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+}
+
+main {
+	flex-grow: 1;
+	margin-top: 30px;
+}
+
+footer {
+	flex-grow: 0;
+	margin: 0;
+	padding: 40px 0 20px 0;
+	text-align: center;
+}
+
+// ---------------------------- Everything above this line is required for layout. 
+
+// header, main, footer {
+// 	@include medium {
+// 		padding-left: 240px;
+// 	}
+// } -------------------------- Use this with side nav
+
+// .nav {
+// 	@include medium {
+// 		margin-left: 240px;
+// 		width: calc(100% - 240px;)
+// 		padding-left: 240px;
+// 	}
+	
+// } -------------------- Use this when top nav and side nav
+
+.button-primary {
+	@include buttons($white, $orange, $orange, $orange-hover);
+}
+
+.button-secondary {
+	@include buttons($orange, $white, $orange, $orange-hover);
+}
+
+.button-tertiary {
+	border-style: solid;
+	border-width: 2px;
+	@include buttons($white, $transparent, $white, $white-hover);
+}
+
+.card {
+	@include card($gray, $white, $gray-lighter);
+}
+
+#nav-link-1 {
+	color: $green;
+	&.illume {
+		@include illume($green, $green-hover, $green);
+	}
+}
+
+#nav-link-2 {
+	color: $orange;
+	&.illume {
+		@include illume($orange, $orange-hover, $orange);
+	}
+}
+
+#nav-link-3 {
+	color: $blue;
+	&.illume {
+		@include illume($blue, $blue-hover, $blue);
+	}
+}
+
+#nav-link-4 {
+	color: $yellow;
+	&.illume {
+		@include illume($yellow, $yellow-hover, $yellow);
+	}
+}
+
+.illume-side {
+	@include illume-side($cyan, $cyan-hover, $cyan);
+}
+
+.dropdown-content {
+	@include dropdown($white, $gray, $size-8, $gray, $gray-lightest);
+}
+
+// Just for testing and redering something in grid
+.grid-test {
+	text-align: center;
+	background-color: $yellow;
+	color: $white;
+}
+
+// Just for testing and rendering something in tiles
+.tiles-test {
+	padding: 20px;
+	background-color: $blue;
+	color: $white;
+	display: block;
+}
+
+// Just for testing and rendering something in slider
+.slider-item {
+	display: inline-block;
+	height: 300px;
+	width: 200px;
+	background-color: $teal;
+	margin: 10px;
+	padding: 20px;
+	color: $white;
+	text-align: center;
+	&:first-child {
+		margin-left: 0;
+	}
+	&:last-child {
+		margin-right: 0;
+	}
+}

@@ -1,0 +1,76 @@
+/*/////////////////////////////////////////
+// -------------- Helpers -------------- //
+/////////////////////////////////////////*/
+
+// Text
+.text-centered {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+
+// Lists
+.list-inline {
+	display: inline;
+	margin-right: 10px;
+	margin-left: 10px;
+	&:first-child {
+		margin-left: 0px;
+	}
+	&:last-child {
+		margin-right: 0px;
+	}
+}
+
+// Visibility
+.hidden {
+  display: none !important;
+}
+
+.hidden-small {
+	@include small {
+		display: none !important;
+	}
+}
+
+.hidden-medium {
+	@include medium {
+		display: none !important;
+	}
+}
+
+.hidden-large {
+	@include large {
+		display: none !important;
+	}
+}
+
+.hidden-wide {
+	@include large {
+		display: none !important;
+	}
+}
+
+// Other
+.disabled {
+  pointer-events: none;
+}
+
+.sans-margin {
+  margin: 0 !important;
+}
+
+.sans-padding {
+  padding: 0 !important;
+}
+
+.buffer {
+	padding-bottom: 10px;
+}

@@ -1,0 +1,74 @@
+/*/////////////////////////////////////////
+// --------------- Navs ---------------- //
+/////////////////////////////////////////*/
+
+// Detachable Nav Menu
+.nav-aside {
+	padding-left: 20px;
+	ul {
+		li {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			flex-wrap: wrap;
+			padding-top: 2px;
+			padding-bottom: 2px;
+			.scroll-anchor {
+				color: $orange;
+				padding-left: 10px;
+				text-decoration: none;
+				&:hover {
+					color: $orange-hover;
+				}
+				&.active {
+					border-left: 2px solid $orange;
+					margin-left: -2px;
+				}
+			}
+		}
+	}
+	@include small {
+		display: none;
+	}
+	@include medium-only {
+		display: none;
+	}
+	&.detached {
+		position: fixed;
+		top: 30px;
+	}
+}
+
+.nav-aside-container {
+	@include small {
+		display: none;
+	}
+	@include medium-only {
+		display: none;
+	}
+}
+
+// Pagination
+.pagination,
+.pagination-list {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	li {
+		display: inline-flex;
+		.pagination-link {
+			text-decoration: none;
+			color: $gray;
+			font-size: $size-6;
+			padding-right: 10px;
+			padding-left: 10px;
+			&:hover:not(.active) {
+				background-color: $gray-lightest;
+			}
+			&.active {
+				background-color: $red;
+				color: $white;
+			}
+		}
+	}
+}

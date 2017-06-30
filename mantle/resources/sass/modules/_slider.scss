@@ -1,0 +1,35 @@
+/*/////////////////////////////////////////
+// ------------- Slider ---------------- //
+/////////////////////////////////////////*/
+
+.slider {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	.slider-outer {
+		display: flex;
+		flex: 1;
+		overflow-y: visible;
+		overflow-x: hidden;
+		.slider-inner {
+			white-space: nowrap;
+			width: 100%;
+		}
+	}
+}
+
+.slider-chevron {
+	cursor: pointer;
+	&.left {
+		margin-right: 10px;
+	}
+	&.right {
+		margin-left: 10px;
+	}
+	&:hover {
+		color: $gray-lighter;
+	}
+	&:focus {
+		color: $gray;
+	}
+}
